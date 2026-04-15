@@ -210,6 +210,5 @@ __marimo__/
 node_modules/
 frontend/dist/
 
-# Local knowledge base (drop personal .md files here; don't commit)
-backend/kb/*.md
+# Knowledge base markdown files are tracked (privacy-reviewed, no personal data)
 frontend/tsconfig.tsbuildinfo
