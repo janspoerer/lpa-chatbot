@@ -205,3 +205,11 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Node / frontend
+node_modules/
+frontend/dist/
+
+# Local knowledge base (drop personal .md files here; don't commit)
+backend/kb/*.md
+frontend/tsconfig.tsbuildinfo

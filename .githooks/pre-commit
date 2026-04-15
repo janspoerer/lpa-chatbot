@@ -1,0 +1,47 @@
+#!/bin/bash
+# Pre-commit hook: backend tests + frontend typecheck + frontend tests.
+# All three run on every commit, regardless of which files changed.
+#
+# Activated via `git config core.hooksPath .githooks` (run once per clone).
+# Skip with `git commit --no-verify` only in emergencies.
+
+set -e
+
+REPO_ROOT=$(git rev-parse --show-toplevel)
+cd "$REPO_ROOT"
+
+# -----------------------------------------------------------------------------
+# 1. Backend: pytest
+# -----------------------------------------------------------------------------
+echo "pre-commit [1/3]: backend pytest"
+
+if [ -x backend/.venv/bin/python ]; then
+    PY=backend/.venv/bin/python
+elif command -v python3 >/dev/null 2>&1; then
+    PY=python3
+else
+    echo "pre-commit: ERROR — no python interpreter found (expected backend/.venv or system python3)"
+    exit 1
+fi
+
+(cd backend && "../$PY" -m pytest -q)
+
+# -----------------------------------------------------------------------------
+# 2. Frontend: TypeScript typecheck
+# -----------------------------------------------------------------------------
+echo "pre-commit [2/3]: frontend tsc"
+
+if [ ! -d frontend/node_modules ]; then
+    echo "pre-commit: installing frontend dependencies..."
+    (cd frontend && npm install --silent)
+fi
+
+(cd frontend && npx --no-install tsc -b)
+
+# -----------------------------------------------------------------------------
+# 3. Frontend: vitest
+# -----------------------------------------------------------------------------
+echo "pre-commit [3/3]: frontend vitest"
+(cd frontend && npx --no-install vitest run)
+
+echo "pre-commit: ok"
