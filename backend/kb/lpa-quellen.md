@@ -81,9 +81,18 @@
 - **Norwitz N. (2025).** Podcast-Gespräch über Lipoprotein(a) mit
   Übersichten zu siRNA (Injektion bis 99 %, oral bis 85 %) und Einfluss
   von gesättigten Fetten auf Lp(a).
-- **Rath M. (2025-04-22).** "Advances in Cellular Medicine" – Darstellung
-  der Pauling-Rath-Hypothese.
+- **Rath M. (2025-04-22).** "Advances in Cellular Medicine" – Ausführliche
+  Darstellung der Pauling-Rath-Hypothese: Lp(a) als Vitamin-C-Surrogat,
+  Lysin/Prolin-Bindungsmechanismus, Dosierungsprotokoll, evolutionäre
+  Argumentation (Vitamin-C-Syntheseverlust beim Menschen).
 - **Attia P. (2024).** "On Lowering apoB."
+
+## Experimentelle Therapien
+
+- **Hyaluronidase / Hylasetherapie (RePair):** Experimenteller Ansatz zur
+  Regeneration der Glykokalyx (Gefäßschutzschicht) mittels Hyaluronidase-
+  Enzym. Keine RCTs, keine Leitlinienempfehlung. Kosten ca. 9.000 €
+  (Privatleistung).
 
 ## Patientenorganisationen und Fachgesellschaften
 

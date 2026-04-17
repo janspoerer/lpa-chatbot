@@ -29,8 +29,10 @@ describe("App", () => {
   it("renders the empty-state hint when there is no history", () => {
     render(<App />);
     expect(screen.getByRole("heading", { name: /Lp\(a\) Chatbot/i })).toBeInTheDocument();
-    expect(screen.getByText(/Frag mich etwas/i)).toBeInTheDocument();
+    expect(screen.getByPlaceholderText(/Frag mich etwas/i)).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /Senden/i })).toBeDisabled();
+    // Starter chips are visible before the first prompt.
+    expect(screen.getByRole("button", { name: /Was ist Lipoprotein/i })).toBeInTheDocument();
   });
 
   it("loads prior messages from localStorage", () => {

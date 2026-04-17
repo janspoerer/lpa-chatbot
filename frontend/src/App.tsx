@@ -121,8 +121,38 @@ export function App() {
     localStorage.setItem(DISCLAIMER_KEY, "1");
   }
 
+  const isEmpty = messages.length === 0 && !busy && !error;
+
+  const composer = (
+    <div className="composer">
+      <textarea
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" && !e.shiftKey) {
+            e.preventDefault();
+            send();
+          }
+        }}
+        placeholder="Frag mich etwas über Lipoprotein(a)…"
+        disabled={busy}
+        rows={2}
+      />
+      <div className="composer-row">
+        <div className="composer-hint">↵ senden · ⇧↵ neue Zeile</div>
+        <button
+          className="btn-primary"
+          onClick={send}
+          disabled={busy || !input.trim()}
+        >
+          Senden
+        </button>
+      </div>
+    </div>
+  );
+
   return (
-    <div className="app">
+    <div className={`app${isEmpty ? " app-empty" : ""}`}>
       <header className="app-header">
         <div className="brand">
           <span className="brand-mark" aria-hidden>
@@ -147,9 +177,7 @@ export function App() {
       {!disclaimerDismissed && (
         <div className="disclaimer">
           <div className="disclaimer-body">
-            <strong>Keine medizinische Beratung.</strong> Diese Anwendung dient
-            ausschließlich zu Informationszwecken. Im Zweifel sprich mit einer
-            Ärztin oder einem Arzt.
+            <strong>Keine medizinische Beratung.</strong> Diese Anwendung dient ausschließlich zu Informationszwecken und ist primär für meine eigenen Zwecke erstellt worden.
           </div>
           <button
             className="disclaimer-dismiss"
@@ -162,17 +190,10 @@ export function App() {
       )}
 
       <main className="transcript">
-        {messages.length === 0 && !busy && (
+        {isEmpty && (
           <div className="empty">
             <div className="empty-mark">
               <RedCross size={30} />
-            </div>
-            <div className="empty-title">
-              Frag mich etwas über Lipoprotein(a)
-            </div>
-            <div className="empty-sub">
-              Ich suche in der kuratierten Wissensdatenbank nach Antworten und
-              nenne dir die Quellen.
             </div>
             <div className="starter-chips">
               {STARTERS.map((s) => (
@@ -185,6 +206,7 @@ export function App() {
                 </button>
               ))}
             </div>
+            <div className="empty-composer">{composer}</div>
           </div>
         )}
 
@@ -218,33 +240,7 @@ export function App() {
         <div ref={endRef} />
       </main>
 
-      <footer className="composer-wrap">
-        <div className="composer">
-          <textarea
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" && !e.shiftKey) {
-                e.preventDefault();
-                send();
-              }
-            }}
-            placeholder="Frag mich etwas über Lipoprotein(a)…"
-            disabled={busy}
-            rows={2}
-          />
-          <div className="composer-row">
-            <div className="composer-hint">↵ senden · ⇧↵ neue Zeile</div>
-            <button
-              className="btn-primary"
-              onClick={send}
-              disabled={busy || !input.trim()}
-            >
-              Senden
-            </button>
-          </div>
-        </div>
-      </footer>
+      {!isEmpty && <footer className="composer-wrap">{composer}</footer>}
     </div>
   );
 }

@@ -26,36 +26,19 @@ des Lp(a)-Wertes. Das heißt: Ernährungsempfehlungen, die für LDL gut sind,
 können Lp(a) sogar leicht anheben. Praktisch relevant ist das aber kaum –
 der LDL-Benefit überwiegt.
 
-## Vitamin C (und die Pauling-Rath-Hypothese)
+## Vitamin C, Lysin, Prolin (Pauling-Rath-Hypothese)
 
-Linus Pauling und Matthias Rath stellten die Hypothese auf, dass Lp(a) eine
-Art "Notpflaster" für geschwächtes Kollagen in den Arterien sei und dass
-hohe Dosen **Vitamin C**, **Lysin** und **Prolin** Plaques reduzieren könnten.
+Linus Pauling und Matthias Rath stellten die Hypothese auf, dass Lp(a) ein
+evolutionärer Ersatz für Vitamin C sei und dass hochdosiertes **Vitamin C**,
+**Lysin** und **Prolin** Plaques reduzieren könnten.
 
-Evidenzlage dazu:
+**Kurzfazit:** Ein klinisch bedeutsamer Lp(a)-senkender Effekt durch Vitamin C
+ist **nicht belegt** (Bostom 1995, Jacques 1995, Ashor 2016, Heart Protection
+Study 2002). Es gibt keine große RCT zum vollständigen Protokoll.
 
-- **Pro:** Meerschweinchen (die – wie Menschen – kein eigenes Vitamin C
-  herstellen) entwickeln unter Vitamin-C-Mangel Atherosklerose (Willis 1953;
-  Rath & Pauling 1990). Kleine, unkontrollierte Fallserien und Einzelfälle
-  (u. a. Niedzwiecki & Rath 1996, Pauling 1991) berichten über Besserung.
-- **Kontra / null:**
-  - **Bostom et al. (1995):** Hochdosierte Ascorbat-Supplementierung senkt
-    Lp(a) bei Patienten mit früher koronarer Herzkrankheit **nicht
-    klinisch relevant**.
-  - **Jacques et al. (1995):** 1 g Vitamin C täglich hat **keinen Effekt**
-    auf apoB oder Lp(a); ein leichter Anstieg des HDL wurde beobachtet.
-  - **Ashor et al. (2016), Meta-Analyse:** Vitamin C hat keinen Effekt
-    auf Blutfette insgesamt.
-  - **Heart Protection Study (2002):** Antioxidative Vitamine zeigten bei
-    20.536 Hochrisiko-Personen über 5 Jahre **keinen** Einfluss auf
-    Mortalität oder kardiovaskuläre Ereignisse.
-- **Großes Manko:** Es gibt keine große randomisierte kontrollierte Studie
-  zum vollständigen Pauling-Rath-Protokoll mit klinischen Endpunkten.
-
-**Fazit:** Ein klinisch bedeutsamer Lp(a)-senkender Effekt durch Vitamin C
-ist **nicht belegt**. Vitamin C in moderaten Mengen ist sicher und ggf. aus
-anderen Gründen sinnvoll, aber man sollte sich nicht darauf verlassen,
-dass es Lp(a) oder das Herz-Kreislauf-Risiko stark reduziert.
+Die ausführliche Darstellung – Mechanismus, Dosierungsprotokoll, Pro- und
+Kontra-Evidenz, kritische Einordnung – steht in
+`lpa-experimentelle-therapien.md`.
 
 ## Niacin (Vitamin B3)
 
@@ -66,10 +49,9 @@ Nebenwirkungen hat (Flush, Leberwerte, Insulinresistenz).
 
 ## Lysin und Prolin
 
-Aminosäuren, die im Pauling-Rath-Protokoll empfohlen werden, weil apo(a)
-theoretisch an Lysin- und Prolin-Bindungsstellen im beschädigten
-Gefäßkollagen anheftet. Evidenz beschränkt sich auf Fallberichte – **kein
-randomisierter Wirksamkeitsnachweis**.
+Aminosäuren im Pauling-Rath-Protokoll (Details in
+`lpa-experimentelle-therapien.md`). Evidenz beschränkt sich auf
+Fallberichte – **kein randomisierter Wirksamkeitsnachweis**.
 
 ## Aspirin
 
